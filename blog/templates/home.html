@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="BOOTSTRAP_5/dist/css/bootstrap.css">
+  <div class="jumbotron">
+      <h1 class="display-4">Welcome to The People Initiative</h1>
+      <p class="lead">We are dedicated to making a positive impact on people's lives.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
+
+	{%  for post in posts %}
+	<h1>{{ post.title }}</h1>
+	<p>By {{ post.author }} on {{  post.date_posted  }}</p>
+	{% endfor %}
+    </div>
+  </div>
+
+{%  endblock  content  %}
